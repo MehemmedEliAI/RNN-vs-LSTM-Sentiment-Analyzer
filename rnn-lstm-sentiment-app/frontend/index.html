@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RNN vs LSTM Sentiment Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="container">
+        <header class="header">
+            <h1>RNN vs LSTM Sentiment Analyzer</h1>
+            <p class="subtitle">Type a movie review and compare how two neural networks feel about it.</p>
+        </header>
+
+        <section class="input-section">
+            <label for="reviewInput" class="input-label">Your review</label>
+            <textarea
+                id="reviewInput"
+                placeholder="For example: I loved this movie, the story was incredible and the actors were amazing!"></textarea>
+            <button id="analyzeButton" class="primary-button" onclick="analyze()">Analyze sentiment</button>
+        </section>
+
+        <section class="results-section">
+            <h2 class="section-title">Model comparison</h2>
+            <div class="results">
+                <div class="card rnn-card">
+                    <div class="card-header">
+                        <span class="chip chip-rnn">RNN</span>
+                    </div>
+                    <div class="score-row">
+                        <span class="score-label">Score</span>
+                        <span id="rnnScore" class="score-value">-</span>
+                    </div>
+                    <div class="bar-row">
+                        <div class="confidence-bar">
+                            <div id="rnnBar" class="confidence-fill rnn-fill"></div>
+                        </div>
+                    </div>
+                    <div class="label-row">
+                        <span class="label-text">Prediction</span>
+                        <span id="rnnLabel" class="pill pill-neutral">-</span>
+                    </div>
+                </div>
+
+                <div class="card lstm-card">
+                    <div class="card-header">
+                        <span class="chip chip-lstm">LSTM</span>
+                    </div>
+                    <div class="score-row">
+                        <span class="score-label">Score</span>
+                        <span id="lstmScore" class="score-value">-</span>
+                    </div>
+                    <div class="bar-row">
+                        <div class="confidence-bar">
+                            <div id="lstmBar" class="confidence-fill lstm-fill"></div>
+                        </div>
+                    </div>
+                    <div class="label-row">
+                        <span class="label-text">Prediction</span>
+                        <span id="lstmLabel" class="pill pill-neutral">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span class="legend positive">Positive</span>
+            <span class="legend negative">Negative</span>
+        </footer>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

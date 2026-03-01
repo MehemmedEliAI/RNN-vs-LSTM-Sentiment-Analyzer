@@ -1,0 +1,21 @@
+venv/
+env/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+
+models/
+
+node_modules/
+dist/
+build/
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Cursor / editor artifacts
+.cursor/
+
